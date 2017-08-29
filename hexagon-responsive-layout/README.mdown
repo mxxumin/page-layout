@@ -1,0 +1,6 @@
+#六边形响应式布局效果图如下：
+***
+![](img/hexagon.gif)
+***
+实现代码见<span style="background:#F4923D;">index.html文件</span>。
+图片素材见<span style="background:#F4923D;">img文件</span>。
