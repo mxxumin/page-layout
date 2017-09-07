@@ -24,7 +24,7 @@
 			width:100%;
 			height:100%;
 			background:#03C9A9;
-			transform:translate3d(0, -200%, 0);
+			transform:translate3d(0, 0, 0);
 		}
 		.slide-page{
 			width:100%;
@@ -107,28 +107,41 @@
 		    <i class="circle"></i>
 		</a>
 	</div>
-	<div class="arrow">
+	<div id="arrow" class="arrow">
 		<span></span>
 		<span></span>
 	</div>
 	<script type="text/javascript">
 		window.onload = function(){
-			var slidePagesPaginations = document.getElementById("slidePagesPaginations"),
+			var slidePagesContainer = document.getElementById("slidePagesContainer"),
+			    slidePagesPaginations = document.getElementById("slidePagesPaginations"),
 			    slidePagePagination = slidePagesPaginations.getElementsByTagName("a"),
-			    len = slidePagePagination.length;
-			function changePage(){
+			    len = slidePagePagination.length,
+			    next = document.getElementById("arrow"),
+			    index = 0;
+			function switchPage(){
+				var x = -index*100+"%";
+				console.log(x);
 				for(i = 0; i < len; i++){
-					slidePagePagination[i].className = "slide-page-pagination";
-					pages[i].style.display = "none";
+					slidePagePagination[i].getElementsByTagName("i")[0].className = "circle";
+					slidePagesContainer.style.transform = "translate3d(0, 0, 0)";
 				}
-				slidePagePagination[index].className = "slide-page-pagination active";
+				slidePagePagination[index].getElementsByTagName("i")[0].className = "circle active";
+				slidePagesContainer.style.transform = "translate3d(0, " + x + ", 0)";
 			}
 			for(i = 0; i < len; i++){
 				slidePagePagination[i].id = i;
 				slidePagePagination[i].onclick = function(){
 					index = this.id;
-					changePage();
+					switchPage();
 				}
+			}
+			next.onclick = function(){
+				index++;
+				if(index >= len){
+					index = 0;
+				}
+				switchPage();
 			}
 		}
 	</script>
