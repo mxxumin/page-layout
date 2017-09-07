@@ -2,94 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
-	<style type="text/css">
-		*{
-			padding:0;
-			margin:0;
-			box-sizing:border-box;
-		}
-		html, body{
-			width:100%;
-			height:100%;
-		}
-		body{
-			position:relative;
-			overflow:hidden;
-		}
-		.slide-pages-container{
-			position:absolute;
-			top:0;
-			left:0;
-			width:100%;
-			height:100%;
-			background:#03C9A9;
-			transition:transform ;
-			transform:translate3d(0, 0, 0);
-		}
-		.slide-page{
-			width:100%;
-			height:100%;
-		}
-		.slide-page-1{
-			background:url("img/page1.jpg") center center no-repeat;
-			background-size:cover;
-		}
-		.slide-page-2{
-			background:url("img/page2.jpg") center center no-repeat;
-			background-size:cover;
-		}
-		.slide-page-3{
-			background:url("img/page3.jpg") center center no-repeat;
-			background-size:cover;
-		}
-		.slide-pages-paginations{
-			position:absolute;
-			right:50px;
-			top:50%;
-			margin-top:calc(-25px * 3 /2);
-		}
-		.slide-page-pagination{
-			display:block;
-			width:25px;
-			height:25px;
-			padding:5px;
-		}
-		.circle{
-			display:block;
-			width:15px;
-			height:15px;
-			border:1px solid #EEEEEE;
-			border-radius:50%;
-		}
-		.active{
-			background:#6C7A89;
-		}
-		.arrow{
-			position:absolute;
-			bottom:100px;
-			left:50%;
-			width:60px;
-			height:60px;
-			cursor:pointer;
-		}
-		.arrow span{
-			position:absolute;
-			top:50%;
-			display:block;
-			width:30px;
-			height:4px;
-			background:#fff;
-		}
-		.arrow span:nth-child(1){
-			right:calc(50% - 5px);
-			transform:rotate(45deg);
-		}
-		.arrow span:nth-child(2){
-			left:calc(50% - 5px);
-			transform:rotate(-45deg);
-		}
-	</style>
+	<title>轮播图效果页面布局</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <div id="slidePagesContainer" class="slide-pages-container">
@@ -112,45 +26,6 @@
 		<span></span>
 		<span></span>
 	</div>
-	<script type="text/javascript">
-		window.onload = function(){
-			var slidePagesContainer = document.getElementById("slidePagesContainer"),
-			    slidePagesPaginations = document.getElementById("slidePagesPaginations"),
-			    slidePagePagination = slidePagesPaginations.getElementsByTagName("a"),
-			    len = slidePagePagination.length,
-			    next = document.getElementById("arrow"),
-			    index = 0;
-			function switchPage(){
-				var x = -index*100+"%";
-				console.log(x);
-				next.style.display = "block";
-				if(index == len-1){
-					console.log(index);
-					next.style.display = "none";
-				}
-				for(i = 0; i < len; i++){
-					slidePagePagination[i].getElementsByTagName("i")[0].className = "circle";
-					slidePagesContainer.style.transform = "translate3d(0, 0, 0)";
-				}
-				slidePagePagination[index].getElementsByTagName("i")[0].className = "circle active";
-				slidePagesContainer.style.transform = "translate3d(0, " + x + ", 0)";
-				slidePagesContainer.style.transition = "700ms ease";
-			}
-			for(i = 0; i < len; i++){
-				slidePagePagination[i].id = i;
-				slidePagePagination[i].onclick = function(){
-					index = this.id;
-					switchPage();
-				}
-			}
-			next.onclick = function(){
-				index++;
-				if(index == len){
-					index = 0;
-				}
-				switchPage();
-			}
-		}
-	</script>
+	<script type="text/javascript" src="js/js.js"></script>
 </body>
 </html>
