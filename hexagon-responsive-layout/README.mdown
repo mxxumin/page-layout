@@ -2,7 +2,8 @@
 ***
 ![](img/hexagon.gif)
 ***
-`Demo`:point_right:[演示地址](https://mxxumin.github.io/page-layout/%E8%BD%AE%E6%92%AD%E5%9B%BE%E6%95%88%E6%9E%9C%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/index.html):point_left:
+`Demo`:point_right:[演示地址](https://mxxumin.github.io/page-layout/hexagon-responsive-layout/index.html):point_left:
 ***
-实现代码见`index.html`文件。
-图片素材见`img`文件。
+
+* 实现代码见`index.html`文件
+* 图片素材见`img`文件
