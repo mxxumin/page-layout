@@ -5,13 +5,13 @@
 ![](img/lunbo.gif)
 ***
 
-`demo1`:point_right:[演示地址](https://mxxumin.github.io/page-layout/%E8%BD%AE%E6%92%AD%E5%9B%BE%E6%95%88%E6%9E%9C%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/index.html):point_left:
+`demo1`:point_right:[演示地址](https://mxxumin.github.io/page-layout/%E8%A7%86%E5%B7%AE%E6%BB%9A%E5%8A%A8%E6%95%88%E6%9E%9C/demo1/index.html):point_left:
 
-`demo2`:point_right:[演示地址](https://mxxumin.github.io/page-layout/%E8%BD%AE%E6%92%AD%E5%9B%BE%E6%95%88%E6%9E%9C%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/index.html):point_left:
+`demo2`:point_right:[演示地址](https://mxxumin.github.io/page-layout/%E8%A7%86%E5%B7%AE%E6%BB%9A%E5%8A%A8%E6%95%88%E6%9E%9C/demo2/index.html):point_left:
 
-`demo3`:point_right:[演示地址](https://mxxumin.github.io/page-layout/%E8%BD%AE%E6%92%AD%E5%9B%BE%E6%95%88%E6%9E%9C%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/index.html):point_left:
+`demo3`:point_right:[演示地址](https://mxxumin.github.io/page-layout/%E8%A7%86%E5%B7%AE%E6%BB%9A%E5%8A%A8%E6%95%88%E6%9E%9C/demo3/index.html):point_left:
 
-`demo4`:point_right:[演示地址](https://mxxumin.github.io/page-layout/%E8%BD%AE%E6%92%AD%E5%9B%BE%E6%95%88%E6%9E%9C%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/index.html):point_left:
+`demo4`:point_right:[演示地址](https://mxxumin.github.io/page-layout/%E8%A7%86%E5%B7%AE%E6%BB%9A%E5%8A%A8%E6%95%88%E6%9E%9C/demo4/index.html):point_left:
 
 > 当鼠标滚动到该可视区域时，该可视区域中的元素会以动画的形式展示出来，给人一种身临其境的感觉，于是，一种想实现这种页面效果，终于在网上找到了它的实现方法，于是便自己写了几个demo来展示一下。这种页面效果叫做视差滚动效果，视差滚动效果就是页面中的元素在页面滚动的时候位置发生变化且变化速度不同产生的一种
 
