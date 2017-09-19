@@ -4,18 +4,76 @@
 	<meta charset="UTF-8">
 	<title>视差滚动效果1</title>
 	<style type="text/css">
-		html, body, div{
+		*{
 			padding:0;
 			margin:0;
 		}
+		/*容器样式*/
 		.container{
-			
+			position:relative;
+		    width:100%;
+		    min-width:1200px;
+		    max-width:1920px;	
+		    height:524px;
+		    background-position:center center;
+		    background-repeat:no-repeat;
+		    background-attachment:fixed;
+		}
+		.container1{
+		    background-image:url(../img/9.jpg);
+		}
+		.container2{
+		    background-image:url(../img/10.jpg);
+		}
+		.container3{
+		    background-image:url(../img/11.jpg);
+		}
+		/*容器中元素样式*/
+		.character{
+			position:absolute;
+			top:50%;
+			left:20px;
+			width:377px;
+			height:496px;
+			margin-top:-248px;
+			background-position:center center;
+			background-repeat:no-repeat;
+			background-size:100% auto;
+		}
+		.character1{
+			background-image:url(../img/5.png);
+		}
+		.character2{
+			background-image:url(../img/6.png);
+		}
+		.character3{
+			background-image:url(../img/7.png);
+		}
+		.content{
+			position:absolute;
+			top:50%;
+			left:50%;
+			font-size:40px;
+			transform:translate(0, -50%);
 		}
 	</style>
 </head>
 <body>
-	<div class="container container1"></div>
-	<div class="container container2"></div>
-	<div class="container container3"></div>
+
+	<div class="container container1">
+		<div class="character character1"></div>
+		<div class="content">视差滚动效果</div>
+	</div>
+
+	<div class="container container2">
+		<div class="character character2"></div>
+		<div class="content">视差滚动效果</div>
+	</div>
+
+	<div class="container container3">
+		<div class="character character3"></div>
+		<div class="content">视差滚动效果</div>
+	</div>
+
 </body>
 </html>
