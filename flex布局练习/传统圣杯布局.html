@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>传统圣杯布局</title>
+	<style>
+		/*传统圣杯布局实现*/
+		header,footer{
+			width:100%;
+			height:50px;
+		}
+		header{
+			background:#474EF4;
+		}
+		footer{
+			background:#49B31F;
+		}
+		.container{
+			height:500px;
+			padding:0 200px;
+		}
+		main,nav,aside{
+			float:left;
+		}
+		main{
+			width:100%;
+			height:100%;
+			background:#FB4242;
+		}
+		nav{
+			position:relative;
+			left:-200px;
+			width:200px;
+			height:100%;
+			margin-left:-100%;
+			background:#F96B39;
+		}
+		aside{
+			position:relative;
+			left:200px;
+			width:200px;
+			height:100%;
+			margin-left:-200px;
+			background:#D6CB39;
+		}
+	</style>
+</head>
+<body>
+	<!-- 传统圣杯布局实现 -->
+	<header>#header</header>
+	<div class="container">
+		<main>#center</main>
+		<nav>#left</nav>
+		<aside>#right</aside>
+	</div>
+	<footer>#footer</footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>流式布局</title>
+	<style type="text/css">
+		/*流式布局*/
+		.parent{
+			display:flex;
+			flex-flow:row wrap;
+			align-content:flex-start;
+			width:500px;
+			height:500px;
+			margin:30px auto;
+			background:#898989;
+		}
+		.child{
+			flex:0 0 25%;
+			box-sizing:border-box;
+			height:25%;
+			border:1px solid #000;
+			background:#43EBDF;
+		}
+	</style>
+</head>
+<body>
+    <!-- 流式布局 -->
+    <div class="parent">
+    	<div class="child"></div>
+    	<div class="child"></div>
+    	<div class="child"></div>
+    	<div class="child"></div>
+    	<div class="child"></div>
+    	<div class="child"></div>
+    	<div class="child"></div>
+    	<div class="child"></div>
+    	<div class="child"></div>
+    	<div class="child"></div>
+    	<div class="child"></div>
+    </div>
+</body>
+</html>
