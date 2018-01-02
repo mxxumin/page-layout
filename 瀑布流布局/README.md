@@ -5,11 +5,11 @@
 ![](img/waterfall.gif)
 ***
 
-`Demo-css3代码实现`:point_right:[演示地址](https://mxxumin.github.io/page-layout/%E8%BD%AE%E6%92%AD%E5%9B%BE%E6%95%88%E6%9E%9C%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/index.html):point_left:
+`Demo-css3代码实现`:point_right:[演示地址](https://mxxumin.github.io/page-layout/%E7%80%91%E5%B8%83%E6%B5%81%E5%B8%83%E5%B1%80/css3/index.html):point_left:
 
-`Demo-javascript代码实现`:point_right:[演示地址](https://mxxumin.github.io/page-layout/%E8%BD%AE%E6%92%AD%E5%9B%BE%E6%95%88%E6%9E%9C%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/index.html):point_left:
+`Demo-javascript代码实现`:point_right:[演示地址](https://mxxumin.github.io/page-layout/%E7%80%91%E5%B8%83%E6%B5%81%E5%B8%83%E5%B1%80/javascript/index.html):point_left:
 
-`Demo-jquery代码实现`:point_right:[演示地址](https://mxxumin.github.io/page-layout/%E8%BD%AE%E6%92%AD%E5%9B%BE%E6%95%88%E6%9E%9C%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/index.html):point_left:
+`Demo-jquery代码实现`:point_right:[演示地址](https://mxxumin.github.io/page-layout/%E7%80%91%E5%B8%83%E6%B5%81%E5%B8%83%E5%B1%80/jquery/index.html):point_left:
 
 > `“瀑布流布局”`是一种常见的用于展示图片、文字的布局方式，它表现为宽度相同，高度不同，错落但又规整的感觉，并且在滚动页面时，可以不断的加载新的内容。
 
