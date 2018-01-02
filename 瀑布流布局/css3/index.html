@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>瀑布流布局</title>
+	<style>
+		html, body, ul, li{
+			padding:0;
+			margin:0;
+		}
+		ul{
+			position:relative;
+			width:1200px;
+			margin:0 auto;
+			list-style:none;
+			-webkit-column-count:6;
+			-moz-column-count:6;
+			column-count:6;
+		}
+		li{
+			float:left;
+			width:190px;
+			height:auto;
+			padding:10px 5px;
+		}
+		li img{
+			display:block;
+			width:190px;
+			height:auto;
+			box-shadow:0 0 10px 2px #ccc;
+		}
+	</style>
+</head>
+<body>
+	<ul id="container">
+		<li>
+			<img src="../img/1.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/2.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/3.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/4.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/5.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/6.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/7.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/8.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/9.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/10.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/11.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/12.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/13.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/14.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/15.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/16.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/17.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/18.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/19.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/20.jpg" alt="">
+		</li>
+		<li>
+			<img src="../img/21.jpg" alt="">
+		</li>
+	</ul>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script>
+		$(window).on("load", function(){
+
+			// 图片数据
+			var data = {"data": [{"src": "1.jpg"}, {"src": "2.jpg"}, {"src": "3.jpg"}, {"src": "4.jpg"}, {"src": "5.jpg"}, {"src": "6.jpg"}, {"src": "7.jpg"}, {"src": "8.jpg"}, {"src": "9.jpg"}, {"src": "10.jpg"}, {"src": "11.jpg"}, {"src": "12.jpg"}, {"src": "13.jpg"}, {"src": "14.jpg"}, {"src": "15.jpg"}, {"src": "16.jpg"}, {"src": "17.jpg"}, {"src": "18.jpg"}, {"src": "19.jpg"}, {"src": "20.jpg"}, {"src": "21.jpg"}]};
+
+			if(isScroll()){
+				renderData(data.data);
+			}
+
+			// 滚动加载的图片数据
+			$(window).on("scroll", function(){
+				if(isScroll()){
+					renderData(data.data);
+				}
+			})
+		})
+
+		// 检测是否具备了滚动加载数据的条件
+		function isScroll(){
+			var lastItem = $("#container li").last(),
+				scrollTop = $(window).scrollTop(),
+				screenHeight = $(window).height(),
+				lastItemPos = lastItem.offset().top + Math.floor(lastItem.outerHeight()/2);
+			// console.log(scrollTop);
+			// console.log(screenHeight);
+			// console.log(lastItemPos);
+
+			return lastItemPos < scrollTop + screenHeight ? true : false;
+		}
+		// 将数据渲染到页面底部
+		function renderData(data){
+
+			// 将数据渲染到页面底部
+			$.each(data, function(key, val){
+				// 创建img，为img标签添加src，并将将img标签添加在li标签中；创建li标签，并将li标签添加到ul中。
+				var CLi = $("<li>").appendTo($("#container")),
+					CImg = $("<img>").attr("src", "../img/" + $(val).attr("src")).appendTo($(CLi));
+			})
+		}
+	</script>
+</body>
+</html>
