@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新手导航</title>
+	<style>
+		html, body, div{
+			padding:0;
+			margin:0;
+		}
+		body{
+			position:relative;
+			width:100%;
+			height:1694px;
+			background:url(../img/body.png) center top no-repeat;
+		}
+		.mask{
+			position:absolute;
+			top:0;
+			left:0;
+			display:none;
+			width:100%;
+			height:100%;
+			background:#000;
+			opacity:.5;
+			filter:alpha(opacity=50);
+		}
+		.tips{
+			position:absolute;
+			top:138px;
+			left:50%;
+			width:980px;
+			height:500px;
+			margin-left:-490px;
+		}
+		.step{
+			position:absolute;
+			display:none;
+		}
+		.step .next{
+			position:absolute;
+			display:block;
+			overflow:hidden;
+			width:90px;
+			height:30px;
+			text-indent:-999px;
+		}
+		.step .close{
+			position:absolute;
+			display:block;
+			overflow:hidden;
+			width:26px;
+			height:26px;
+			text-indent:-999px;
+		}
+		.step1{
+			top:-8px;
+			left:-10px;
+			width:745px;
+			height:329px;
+			background:url(../img/step-1.png) left top no-repeat;
+		}
+		.step1 .next{
+			top:232px;
+			left:493px;
+		}
+		.step1 .close{
+			top:145px;
+			left:685px;
+		}
+		.step2{
+			top:-134px;
+			left:323px;
+			width:647px;
+			height:405px;
+			background:url(../img/step-2.png) left top no-repeat;
+		}
+		.step2 .next{
+			top:308px;
+			left:149px;
+		}
+		.step2 .close{
+			top:198px;
+			left:335px;
+		}
+		.step3{
+			top:155px;
+			left:318px;
+			width:654px;
+			height:257px;
+			background:url(../img/step-3.png) left top no-repeat;
+		}
+		.step3 .next{
+			top:155px;
+			left:404px;
+		}
+		.step3 .close{
+			top:46px;
+			left:591px;
+		}
+		.step4{
+			top:-57px;
+			left:162px;
+			width:558px;
+			height:348px;
+			background:url(../img/step-4.png) left top no-repeat;
+		}
+		.step4 .next{
+			top:246px;
+			left:308px;
+		}
+		.step4 .close{
+			top:137px;
+			left:495px;
+		}
+		.step5{
+			top:-57px;
+			left:256px;
+			width:397px;
+			height:342px;
+			background:url(../img/step-5.png) left top no-repeat;
+		}
+		.step5 .next{
+			top:246px;
+			left:155px;
+		}
+	</style>
+</head>
+<body>
+	<div class="mask"></div>
+	<div class="tips">
+		<div class="step step1">
+			<a class="next" href="javascript:;">下一步</a>
+			<a class="close" href="javascript:;">关闭</a>
+		</div>
+		<div class="step step2">
+			<a class="next" href="javascript:;">下一步</a>
+			<a class="close" href="javascript:;">关闭</a>
+		</div>
+		<div class="step step3">
+			<a class="next" href="javascript:;">下一步</a>
+			<a class="close" href="javascript:;">关闭</a>
+		</div>
+		<div class="step step4">
+			<a class="next" href="javascript:;">下一步</a>
+			<a class="close" href="javascript:;">关闭</a>
+		</div>
+		<div class="step step5">
+			<a class="next" href="javascript:;">下一步</a>
+		</div>
+	</div>
+	<script src="https://mxxumin.github.io/page-layout/jquerylib/jquery/jquery-3.2.1.min.js"></script>
+	<script>
+		$(function(){
+			// 读取cookie
+			var res = document.cookie.substring(5);
+			alert("当前的cookie是：" + res);
+
+			// 判断是否访问过
+			if(res != "www.open.com.cn"){
+				// 显示遮罩层和第一步提示
+				$(".mask, .tips .step:eq(0)").show();
+
+				// 点击下一步
+				$(".step .next").on("click", function(){
+					$(this).parent().hide().next().show();
+				})
+
+				// 关闭引导
+				$(".step .close, .step .next:last").on("click", function(){
+					// 隐藏遮罩层和提示框
+					$(".mask, .tips").hide();
+				})
+
+				// 添加cookie
+				var date = new Date();
+				date.setDate(date.getDate() + 30);
+				document.cookie = "name=www.open.com.cn;expires=" + date;
+			}
+		})
+	</script>
+</body>
+</html>
