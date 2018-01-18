@@ -5,7 +5,7 @@
 ![](img/lunbo.gif)
 ***
 
-`Demo`:point_right:[演示地址](https://mxxumin.github.io/page-layout/%E8%BD%AE%E6%92%AD%E5%9B%BE%E6%95%88%E6%9E%9C%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/index.html):point_left:
+`Demo`:point_right:[演示地址](https://xm2by.github.io/page-layout/%E8%BD%AE%E6%92%AD%E5%9B%BE%E6%95%88%E6%9E%9C%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/index.html):point_left:
 
 > 在看过支付宝网站个人用户页面的时候，觉得它的轮播图效果的页面展示非常棒，给人一种新的体验，于是就模仿出了一个精精精精简版的，我给它起名叫`“轮播图效果的网页布局”`。
 

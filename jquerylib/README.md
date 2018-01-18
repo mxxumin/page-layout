@@ -9,5 +9,5 @@
 >在html文件中加入下面一行代码，github中需要使用jquery的demo就会顺利的运行起来 :smile::smile::smile:
 
 ```
-<script src="https://mxxumin.github.io/page-layout/jquerylib/jquery/jquery-3.2.1.min.js"></script>
+<script src="https://xm2by.github.io/page-layout/jquerylib/jquery/jquery-3.2.1.min.js"></script>
 ```
