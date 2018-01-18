@@ -4,10 +4,11 @@
 ***
 ![](img/nav.gif)
 ***
+`温馨提示：为了更好的查看demo效果，请使用火狐浏览器。因为关于cookie的操作只有在火狐浏览器中才能看到效果！！！`
 
-`Demo-javascript代码实现`:point_right:[演示地址](https://xm2by.github.io/page-layout/%E7%80%91%E5%B8%83%E6%B5%81%E5%B8%83%E5%B1%80/javascript/index.html):point_left:
+`Demo-javascript代码实现`:point_right:[演示地址](https://xm2by.github.io/page-layout/%E6%96%B0%E6%89%8B%E5%AF%BC%E8%88%AA%E6%95%88%E6%9E%9C/javascript/index.html):point_left:
 
-`Demo-jquery代码实现`:point_right:[演示地址](https://xm2by.github.io/page-layout/%E7%80%91%E5%B8%83%E6%B5%81%E5%B8%83%E5%B1%80/jquery/index.html):point_left:
+`Demo-jquery代码实现`:point_right:[演示地址](https://xm2by.github.io/page-layout/%E6%96%B0%E6%89%8B%E5%AF%BC%E8%88%AA%E6%95%88%E6%9E%9C/jquery/index.html):point_left:
 
 > `“新手导航效果”`是引导用户一步步熟悉使用网站的一种效果，可以让用户更方便地了解网站。
 
