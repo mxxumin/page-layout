@@ -4,7 +4,6 @@
 ***
 ![](img/nav.gif)
 ***
-`温馨提示：为了更好的查看demo效果，请使用火狐浏览器。因为关于cookie的操作只有在火狐浏览器中才能看到效果！！！`
 
 `Demo-javascript代码实现`:point_right:[演示地址](https://xm2by.github.io/page-layout/%E6%96%B0%E6%89%8B%E5%AF%BC%E8%88%AA%E6%95%88%E6%9E%9C/javascript/index.html):point_left:
 
