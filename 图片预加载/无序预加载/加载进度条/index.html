@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>无序预加载——加载进度条</title>
+	<style>
+		html, body, div, img, a{
+			padding:0;
+			margin:0;
+		}
+		.container{
+			position:relative;
+			width:600px;
+			margin:30px auto;
+			text-align:center;
+		}
+		.container .img-box{
+			width:600px;
+		}
+		.container .img-box img{
+			width:600px;
+		}
+		.container .img-box a{
+			display:inline-block;
+			height:25px;
+			padding:0 20px;
+			line-height:25px;
+			color:#fff;
+			background:gray;
+			text-decoration:none;
+		}
+		.container .loading{
+			position:absolute;
+			top:0;
+			left:0;
+			width:600px;
+			height:500px;
+			background:#ccc;
+		}
+		.container .loading .progress{
+			margin-top:200px;
+			text-align:center; 
+			color:#000;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="img-box">
+			<img src="http://i2.hoopchina.com.cn/user/308/15960308/13383588090.jpg" class="img" alt="" />
+			<a href="javascript:;" class="btn" data-control="prev">上一张</a>
+			<a href="javascript:;" class="btn" data-control="next">下一张</a>
+		</div>
+		<div class="loading">
+			<p class="progress">0%</p>
+		</div>
+	</div>
+	<script src="https://xm2by.github.io/page-layout/jquerylib/jquery/jquery-3.2.1.min.js"></script>
+	<script>
+		var imgs = [
+					'http://i2.hoopchina.com.cn/user/308/15960308/13383588090.jpg',
+					'http://img.article.pchome.net/00/44/23/20/pic_lib/wm/2.jpg',
+					'http://lcd.yesky.com/imagelist/2009/044/404q4y8g4m0p.jpg',
+					'http://lcd.yesky.com/imagelist/2009/044/cgro54wt2t2x.jpg'
+					];
+		var index = 0,
+			len = imgs.length,
+			count = 0,
+			$progress = $('.progress');
+
+		// 点击上一张、下一张切换图片
+		$('.btn').on('click', function(){
+			
+			// 判断点击的是上一张还是下一张
+			if('prev' === $(this).data('control')){
+				// 如果点击的是下一张，对应图片的index减1，且注意index值不能小于0
+				index = Math.max(0, --index);
+			}else{
+				index = Math.min(++index, len-1);
+			}
+
+			$('.img').attr('src', imgs[index]);
+		})
+
+		// 图片预加载
+		$.each(imgs, function(i, src){
+			// 利用Image()对象来进行图片的预加载
+			var imgObj = new Image();
+
+			// Image()对象有load和error事件，分别对应图片加载成功和失败
+			$(imgObj).on('load', function(){
+				// 图片每加载成功一次，count值就加1
+				$progress.html(Math.round((count + 1) / len * 100) + '%');
+
+				// 判断图片是否都加载完毕
+				if(count >= len-1){
+					// 图片加载完毕，loading页消失
+					$('.loading').hide();
+				}
+
+				count++;
+			});
+
+			imgObj.src = src
+		});
+	</script>
+</body>
+</html>
