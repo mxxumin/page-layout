@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .anchor {
+            width: 100%;
+            height: 500px;
+            background: #8bc34a;
+        }
+
+        .section1,
+        .section2 {
+            width: 100%;
+            height: 500px;
+        }
+
+        .section1 {
+            background: #03a9f4;
+        }
+
+        .section2 {
+            background: #ffeb3b;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="anchor">
+            <div onclick="skip('#section1')">section1</div>
+            <div onclick="skip('#section2')">section2</div>
+        </div>
+        <div id="section1" class="section1">section1</div>
+        <div id="section2" class="section2">section2</div>
+    </div>
+    <script>
+        function skip(id) {
+            const target = document.querySelector(id);
+            document.documentElement.scrollTop = target.offsetTop - 100;
+        }
+    </script>
+</body>
+</html>
